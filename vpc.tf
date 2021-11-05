@@ -1,7 +1,8 @@
-module "network_gaurav" {
+module "network" {
   source  = "app.terraform.io/dbhashicorp/network/google"
   version = "3.4.0"
-  project_id = "p-kpx64aiwk5yxkqbdh13do51f4kgh"
+  network_name ="network_gaurav"
+  project_id = var.project
   subnets = [
     {
       subnet_name   = "gaurav-subnet"
